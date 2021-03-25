@@ -1,0 +1,150 @@
+<html>
+    <head>
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-database.js"></script>
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+    </head>
+
+   
+    <style>
+        .styled-table {
+            border-collapse: collapse;
+            margin: 25px 80;
+            font-size: 0.9em;
+            font-family: sans-serif;
+            min-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .styled-table thead tr {
+            background-color: #009879;
+            color: #ffffff;
+            text-align: left;
+        }
+
+        .styled-table th, .styled-table td {
+            padding: 20px 60px;
+        }
+
+        .styled-table tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        .styled-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+
+        .styled-table tbody tr:last-of-type {
+            border-bottom: 2px solid #009879;
+        }
+
+        .styled-table tbody tr.active-row {
+            font-weight: bold;
+            color: #009879;
+        }
+    </style>
+
+        <body class="bg-light">
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Event</th>
+                        <th>Link</th>
+                        <th>School Room</th>
+                        <th>Teacher</th>
+                        <th>Attendance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="active-row">
+                        <td>8:30 AM - 9:49 AM</td>
+                        <td>Standard French</td>
+                        <td><a href="https://meet.google.com/ito-fixp-jbx?authuser=0&hl=en" target=”_blank”>Google Meet</a></td>
+                        <td>Upper School 313</td>
+                        <td>Sarah Khalanski</td>
+                        <td>PRESENT</td>
+                    </tr>
+                    <tr class="active-row">
+                        <td>9:50 AM - 10:19 AM</td>
+                        <td>Community Time</td>
+                        <td>No Link</td>
+                        <td>Designated Area</td>
+                        <td>Brittney Triff</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr class="active-row">
+                        <td>10:35 AM - 11:54 AM</td>
+                        <td>Enriched Mathematics</td>
+                        <td><a href="https://meet.google.com/tdt-nymu-amx?authuser=0" target=”_blank”>Google Meet</a></td>
+                        <td>Upper School 313</td>
+                        <td>Bina Evans</td>
+                        <td>PRESENT</td>
+                    </tr>
+                    <tr class="active-row">
+                        <td>11:55 AM - 12:39 PM</td>
+                        <td>Lunch</td>
+                        <td>No Link</td>
+                        <td>N/A</td>
+                        <td>Zulay Rodriguez</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr class="active-row">
+                        <td>12:40 PM - 1:59 PM</td>
+                        <td>Introduction to Computer Science</td>
+                        <td><a href="https://meet.google.com/whv-svhq-qzr" target=”_blank”>Google Meet</a></td>
+                        <td>Upper School 232</td>
+                        <td>Lynda Yearwood</td>
+                        <td>PRESENT</td>
+                    </tr>
+                    <tr class="active-row">
+                        <td>2:05 PM - 3:25 PM</td>
+                        <td>Healthy Active Living Education</td>
+                        <td><a href="https://meet.google.com/sgq-kayd-fgo" target=”_blank”>Google Meet</a></td>
+                        <td>Upper School Lett Gym</td>
+                        <td>Anthony De Giorgio</td>
+                        <td>PRESENT</td>
+                    </tr>
+                </tbody>
+            </table>
+              <br>
+              <br>
+              <br>
+              <br>
+              
+        <div>
+            <button type="button" class="btn btn-warning btn-block btn-large col" style="position:absolute; bottom:100px; left: 0px; " onclick="window.location='profile.html';">Edit Profile</button>
+
+            <button type="button" class="btn btn-danger btn-block btn-large col" style="position:absolute; bottom:50px;" onclick="signOut()">Sign Out</button>
+        </div>
+       
+        <script src="../js/global.js"></script> 
+        <script src="../js/app.js"></script> 
+        
+        <script>
+            var config = 
+            {
+                apiKey: "AIzaSyAoPzu3HO0vGubkzncWcH3GT1pusfcF6Dc",
+                authDomain: "project2-c45e8.firebaseapp.com",
+                databaseURL: "https://project2-c45e8-default-rtdb.firebaseio.com",
+                projectId: "project2-c45e8",
+                storageBucket: "project2-c45e8.appspot.com",
+                messagingSenderId: "403285417971",
+                appId: "1:403285417971:web:fd9975297f15d65cc73c86",
+                measurementId: "G-GF0XTDX88T"
+            };
+
+            firebase.initializeApp(config);
+            firebase.analytics();
+        
+        </script>
+
+    </body>
+</html>
